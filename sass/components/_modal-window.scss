@@ -16,7 +16,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
 }
-.btn-close {
+.modal__btn-close {
     width: 30px;
     height: 30px;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -33,18 +33,19 @@
     justify-content: center;
 
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        border-color: var(--accent-color);
+        outline: none;
+    }
 }
-.icon-btn-close{
+.modal__btn-close-icon{
     fill: #000000;
 
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.btn-close:hover,
-.btn-close:focus {
-    border-color: var(--accent-color);
-    outline: none;
-}
-.btn-close:hover .icon-btn-close,
-.btn-close:focus .icon-btn-close {
-    fill:var(--accent-color);
+
+    .modal__btn-close:hover &,
+    .modal__btn-close:focus & {
+        fill:var(--accent-color);
+    }
 }
